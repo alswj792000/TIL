@@ -3,7 +3,7 @@ https://www.acmicpc.net/problem/10171
 
 ![no.2557](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FckoLkO%2FbtrxhOhidpO%2FfQkQH7Fl6GST3Wdbx85Ldk%2Fimg.png "no.10171")
 
-→ [ERROR] 출력형식이 잘못되었습니다<br>
+→ <span style="color : red"> [ERROR] 출력형식이 잘못되었습니다</span><br>
 
 : 출력 결과는 정답과 유사하나, 공백, 빈 줄과 같은 문제로 인해서 출력 결과가 일치하지 않은 경우<br><br>
 
