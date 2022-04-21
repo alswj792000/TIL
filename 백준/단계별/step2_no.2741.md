@@ -11,9 +11,6 @@ https://www.acmicpc.net/problem/2741
 
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbBtKPj%2Fbtrz6ru61eG%2FLUnpkCAKhLcTBuO3KGaId0%2Fimg.png)
 
-
-![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdA3Eln%2Fbtrz4Pjl6iK%2FWJpXqJ35kCeYsXnSiXJo71%2Fimg.png)
-
 ```java
 import java.util.Scanner;
  
