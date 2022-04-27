@@ -8,4 +8,45 @@ https://www.acmicpc.net/problem/10871
 
 ![record](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FBrnij%2FbtrAs8PiEGn%2FMH9ilZABVO1YJBgLkuu2t0%2Fimg.png "record")
 
-→ 틀렸다고 뜨는데 당연함 나는 정수의 개수만 입력받고 N개의 정수들이 랜덤값으로 들어간다고 생각해서 구현했지만 N개의 정수들도 입력받아야 함
+정수의 개수만 입력받고 N개의 정수들이 랜덤값으로 들어간다는 생각으로 구현했는데 다시 예제 입력 부분을 보니 N개의 정수들도 입력받아야 했다.
+
+![A2](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbptChT%2FbtrABZzbywJ%2FlR0kHnNbtJEtUyE1rzWW2K%2Fimg.png "A2")
+
+```java
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+ 
+public class Main {
+    public static void main(String[] args) throws NumberFormatException, IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        
+        int I = 1;
+        int N, X;
+        
+        for(int i = 0; i < I; i++) {
+            // 주어진 정수의 개수와 기준값
+            String[] inputList = br.readLine().split(" ");
+            N = Integer.parseInt(inputList[0]);
+            X = Integer.parseInt(inputList[1]);
+            
+            // 입력받은 N개의 값 배열에 저장
+            String[] list = br.readLine().split(" ");
+            int[] array = new int[N]; // N개의 정수
+            for(int j = 0; j < N; j++) {
+                array[j] = Integer.parseInt(list[j]);
+                
+                if(array[j] < X) { // 입력받은 값이 X보다 작은값 출력
+                    bw.write(Integer.toString(array[j]) + " ");
+                }
+            }
+        }
+        br.close();
+        bw.flush();
+        bw.close();
+    }
+}
+```
