@@ -1,5 +1,5 @@
 **배열의 오름차순 정렬 : Arrays.sort()**
-sort() 메서드는 배열의 요소를 제자리에 정렬하고 정렬된 배열을 반환한다.
+sort() 메서드는 배열의 요소를 제자리에 정렬하고 정렬된 배열을 반환한다.   
 
 기본 정렬 순서는 오름차순이며 요소를 문자열로 변환한 다음 UTF-16 코드 단위 값의 시퀀스를 비교할 때 작성된다.
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcTmP7y%2FbtrA96Ed17b%2FjCquHZygDD8HoX7311ruR1%2Fimg.png)
