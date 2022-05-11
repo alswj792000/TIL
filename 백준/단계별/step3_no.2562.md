@@ -25,6 +25,7 @@ for문을 이용해서 최댓값과 배열의 j번째 값이 같을때 count를 
 
 - Scanner와 for문 사용
 ![A2](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbZaSmh%2FbtrBQE9d9Jo%2Fr15FlhrZ6cVAAU693eRVA0%2Fimg.png "A2")
+
 최댓값을 구하기위해 nList배열의 값이 nList의 첫번째값보다 클때, 해당 값을 max에 넣도록 for문을 사용했다. <br>
 이 경우 배열의 순서가 변경되지 않기때문에 for문을 이용해 최댓값의 순서를 출력할 수 있었다.
 
