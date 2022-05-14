@@ -6,3 +6,39 @@ https://www.acmicpc.net/problem/2577
 
 ------------
 
+![A](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FoXgao%2FbtrB5Kg5lZq%2FbC8WtjcmbTQRNfyeFCuSe0%2Fimg.png "A")
+
+```java
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args){
+		// A, B, C 세 자연수 입력
+		// AxBxC의 값에서 1-9까지의  숫자가 몇개 쓰였는지 출력
+		Scanner sc = new Scanner(System.in);
+		int A = sc.nextInt();
+		int B = sc.nextInt();
+		int C = sc.nextInt();
+		
+		int sum = A*B*C;
+		String num = Integer.toString(sum);
+//		System.out.println(num);
+		
+		// 곱한 값에서 0-9까지의 숫자가 몇개 쓰였는지 출력
+//		int[] arr = new int[10];
+		for(int i = 0; i < 10; i++) {
+			int count = 0;
+			for(int j = 0; j < num.length(); j++) {
+				//  charAt(): String으로 저장된 문자열 중에서 한 글자만 선택해서 char타입으로 변환
+				if(num.charAt(j)- '0' == i) { //0을 쓰지 않으면 값이 출력되지 않음
+					count++;
+				}
+			}
+			
+			System.out.println(count);
+		}
+		
+	}
+}
+
+```
