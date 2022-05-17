@@ -5,8 +5,8 @@ charAt()은 지정된 인덱스에서 문자를 반환하는 메서드로, 문�
 
 **charAt을 이용해 문자열의 인덱스 값 출력**
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FKuefC%2FbtrCp6JqziG%2FavKu2EBk5MI5W6dc513oi0%2Fimg.png)
-
 <br>
+
 **charAt을 이용해 숫자 출력**
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdxQ8Gn%2FbtrCrQeMYZJ%2FLEPVx2jZkeKSIMZTYDMpD0%2Fimg.png)
 charAt 메서드를 이용해 출력한 문자를 int형으로 변경할 경우 아스키코드값으로 변환이 된다.
