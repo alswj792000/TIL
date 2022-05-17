@@ -18,6 +18,6 @@ num.charAt(0) - 48을 실행시킬 경우 48에서 48을 뺀 값인 0이 출력�
 
 [ 참고 링크 ]
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt
-https://www.w3schools.com/jsref/jsref_charat.asp
-https://cokes.tistory.com/80
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt <br>
+https://www.w3schools.com/jsref/jsref_charat.asp <br>
+https://cokes.tistory.com/80 <br>
