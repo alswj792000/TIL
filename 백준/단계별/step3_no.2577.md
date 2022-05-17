@@ -8,6 +8,14 @@ https://www.acmicpc.net/problem/2577
 
 ![A](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FoXgao%2FbtrB5Kg5lZq%2FbC8WtjcmbTQRNfyeFCuSe0%2Fimg.png "A")
 
+num.charAt(j) - 0을 해주면 문자열num의 j번째 인덱스 자리의 값이 문자열이 아니라 숫자로 변환되어 출력된다.
+
+예를들어 sum의 값이 12345이고 j가 0이라고할때, num.charAt(0)의 값은 문자"1"이다.
+
+하지만, num.charAt(0) - 1일 경우에는 48로 출력된다. 이때 이 48은 문자"0"의 아스키코드를 말한다.
+
+(48이 아니라 0으로 출력하고 싶을 경우에는 num.charAt(0) - 48을 해주면 된다.)
+
 ```java
 import java.util.Scanner;
 
