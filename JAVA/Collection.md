@@ -25,15 +25,15 @@
 
 ** ※ 컬렉션의 주요 인터페이스**
 
- -** Collection**
- -- **List계열**
+ -**Collection**<br>
+ -- **List계열**<br>
  : 순위를 유지하고 저장한다. 중복저장이 가능하다 <br>
    ArrayList, Vector, LinkedList...<br>
- -- **Set계열**
+ -- **Set계열**<br>
  : 순서를 유지하지 않고 저장한다. 중복저장이 불가능하다. <br>
   HashSet, TreeSet <br>
  
- -** Map계열**
+ -**Map계열**<br>
  : key와 값의 쌍으로 저장된다. key의 경우 중복저장이 되지 않지만 값은 중복저장이 된다.<br>
   (* key : Set계열이기때문에 저장순서가 유지되지 않으며 중복저장이 불가능하다.)<br>
   (* value : List계열이기때문에 중복저장이 가능하다.)<br>
