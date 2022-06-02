@@ -12,4 +12,4 @@ List 계열
 ArrayList
 : List의 후손으로 초기 저장용량은 10으로 자동 설정된다. <br>
 		저장용량을 초과한 객체들이 들어올 경우 용량이 자동으로 증가한다. <br>
-		동기화(Syncronized)를 제공하지 않는다.<br>
+		동기화(Syncronized)를 제공하지 않는다.<br>    
