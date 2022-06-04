@@ -16,12 +16,13 @@ ArrayList
 		
 ------
 1. 제네릭이 설정되지 않아서 어던 타입이든 받을수 있는 상태<br>  
-
+![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbgLElJ%2FbtrDYKxG49T%2F4vfDxKXu6adNTi2up9zfI1%2Fimg.png)
 
 
 2. 제네릭 타입 지정 (제네릭 : 제한하고 싶은 타입을 설정하여 제한시켜주는역할)<br>  
-
 - add(E e) : boolean :: 리스트 끝에 데이터 추가<br>  
+![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcgNG70%2FbtrDYLpSiQm%2Fil2ZnSirIWrgTgCCfxm2C0%2Fimg.png)
+![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FlvtK1%2FbtrDYd1cwBc%2F8vDEp2ybIEawoLK8R6zUMk%2Fimg.png)
 <br>  
 - add(int index, E e) : boolean :: index번째 인덱스에 E 추가  → 추가, 삭제, 정렬의 기능처리가 간단하다.<br>  
 <br>  
