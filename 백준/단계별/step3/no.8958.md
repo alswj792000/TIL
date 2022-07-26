@@ -61,7 +61,7 @@ public class Main {
             }
         }
         
-        sc.close();
+        sc.close(); 
         
         // 출력
         for(int i = 0; i < scoreArr.length; i++) {
@@ -72,4 +72,4 @@ public class Main {
 }
 
 ```
-
+ 
