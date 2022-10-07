@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"> <!-- div#app : 자동완성단축키 --></div>
+
+    <script> 
+        var div = document.querySelector("#app"); // 제이쿼리 선택자인 $('#app');와 같은 역할 
+        var str = "hello world" // 대부분의 값들은 변수에 담겨있고 변수를 연결해서 코딩하기때문
+        div.innerHTML = str;
+
+        str = "Hello world!!!"
+        div.innerHTML = str; // 바뀐 값을 다시 대입을 해야만 화면에 마지막으로 입력된 값으로 출력
+
+    </script>
+    
+</body>
+</html>

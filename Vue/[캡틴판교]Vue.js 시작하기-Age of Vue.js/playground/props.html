@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- <app-header v-bind:프롭스 속성 이름="상위 컴포넌트의 데이터 이름"></app-header> -->
+        <app-header v-bind:propsdata="message"></app-header>
+        <!-- app-header의 기준으로 상위 컴포넌트는 Root. Root의 데이터 이름은 message
+            프롭스 속성이름은 app-header태그의 내용에 정의하면 됨
+        -->
+        <app-content :propsdata="num"></app-content>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var appHeader = { // 변수명 카멜케이스로 생성 (*카멜 케이스 : 네이밍기법. 변수명 생성시 단어가 연결되어있을때 두번째단어에서 첫자리를 대문자로 작성 )
+                //  template: '<h1>header</h1>',
+                template: '<h1>{{ propsdata }}</h1>',    // 데이터 바인딩 : {{}}안에 데이터 속성이나 프록스 속성을 넣어주면 값이 뭐가 되었든간에 반영이 됨
+             // 프롭스 속성 이름은 app-header 태그의 내용에 정의(바로 여기)
+             props: ['propsdata']    
+                 
+        }
+
+        var appContent = {
+            // template: '<div>content</div>',
+            template: '<div>{{ propsdata }}</div>',
+            props: ['propsdata']
+        }
+
+        new Vue({
+            el: '#app',
+            components: {
+                'app-header': appHeader,
+                'app-content' : appContent
+            },
+            data: {
+                message: 'hi', // rootComponent에서 관리하는 데이터 -> 이 데이터를 props 속성을 사용해 <Root>인스턴스 아래에 있는 <app-header>컴포넌트로 내릴예정
+                num: 10
+            }
+        });
+
+    </script>
+</body>
+</html>

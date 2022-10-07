@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div>
+            <router-link to="login">Login</router-link>
+            <router-link to="main">Main</router-link>
+            <router-link to="admin">Admin</router-link>
+        </div>
+
+        <!-- 페이지url이 변경되었을때, 그 url을 따라서 뿌려지는 영역 -->
+        <router-view></router-view>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> <!-- 1. vue.js 스크립트 * 순서중요! -->
+    <script src="https://unpkg.com/vue-router@3.5.3/dist/vue-router.js"></script> <!-- 2. vue router : 버전 표시하지 않으면 vue3로 사용되므로 주의 -->
+
+    <script>
+        var LoginComponent = {
+            template: '<div>login</div>'
+        }
+        var MainComponent = {
+            template: '<div>main</div>'
+        }
+        var AdminComponent = {
+            template : '<div>admin</div>',
+            // 컴포넌트 가드
+            beforeRouteEnter(to, from, next){
+                // admin 컴포넌트가 화면에 표시되기 전에 수행될 로직 → localhost/에 진입했을때 출력.
+                // admin 캄포넌트는 아직 생성되지 않은 시점
+                console.log("beforeRouteEnter : admin 컴포넌트가 화면에 표시되기 전에 수행될 로직");
+                next(); // next()추가시 이동 가능.
+            }, 
+            beforeRouteUpdate(to, from, next){
+                // 화면에 표시된 컴포넌트가 변경될때 수행될 로직 → admin에서 다른 컴포넌트로 이동시 발생
+                // 'this'로 admin 컴포넌트를 접근할 수 있음
+                console.log(" beforeRouteUpdate: 화면에 표시된 컴포넌트가 변경될때 수행될 로직");
+            }, 
+            beforeRouteLeave(to, from, next){
+                // admin 컴포넌트를 화면에 표시한 url 값이 변경되기 직전의 로직 → 같은 라우터 내에서 이동하는 거라 안되나?
+                // 'this'로 admin 컴포넌트를 접근할 수 있음
+                console.log("beforeRouteLeave : 화면에 표시된 컴포넌트가 변경될때 수행될 로직");
+            }
+
+        }
+
+        var router = new VueRouter({
+            // 페이지의 라우팅 정보. 배열로 담김
+            routes: [
+                {
+                    path: '/login',
+                    component: LoginComponent,
+
+                    // 사용자 인증 여부 meta정보 
+                    meta: {authRequired: true} // meta 정보에 authRequired라는 Boolean 값 → 추가사용자 인증 여부 : true일 경우에만 접속 가능
+                },
+                {
+                    path: '/main',
+                    component: MainComponent,
+                    meta: {authRequired: false},
+                    // 라우터 가드 : main
+                    beforeEnter: function(to, from, next){
+                        // 인증 값 검증 로직 추가 
+                        if (to.matched.some(function(routeInfo) { 
+                            return routeInfo.meta.authRequired;
+                        })) {
+                            alert('beforeEnter : Login Please!');
+                        } else {
+                            console.log("beforeEnter : routing success : '" + to.path + "'");
+                            next(); // 페이지 전환
+                        };
+
+                    }
+                },
+                {
+                    path: '/admin',
+                    component : AdminComponent,
+                    meta: {authRequired: false}
+                }
+            ]
+        });
+
+        // 전역 가드 : login
+        // router.beforeEach(function (to, from, next){
+        //     // to : 이동할 url
+        //     // from : 현재 url
+        //     // next : to에서 지정한 url로 이동하기 위해 꼭 호출해야 하는 함수. 해당 함수가 호출되기 전까지는 화면이 전환되지 않음.
+        // });
+
+        router.beforeEach(function (to, from, next){
+            if (to.matched.some(function(routeInfo) { 
+                // 이동할 페이지 url.mathced.some => 이동할 페이지와 (routeInfo함수의 모든 요소를 검사해 조건을 만족시카면 true)비교해 일치하면 routeInfo.meta.authRequired의 불린값 return
+                return routeInfo.meta.authRequired;
+            })) {
+                // else if : 이동할 페이지에 인증 정보가 필요하면 경고 창을 띄우고 페이지 전환은 하지 않음
+                alert('beforeEach : Login Please!');
+            } else { // else : 이동할 페이지에 인증정보가 없으면 next()
+                console.log("beforeEach : routing success : '" + to.path + "'");
+                next(); // 페이지 전환
+            };
+
+        });
+
+        new Vue({
+            el: '#app',
+            router: router //라우터 속성 : 라우터 변수
+        });
+
+    </script>
+</body>
+</html>

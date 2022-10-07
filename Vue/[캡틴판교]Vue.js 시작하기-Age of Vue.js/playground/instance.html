@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> <!-- vue.js 스크립트 -->
+    <script>
+
+        // new Vue라는 인스턴스 생성후 options 객체 추가 방법
+        // var options = {
+        //     el: '#app',
+        //     data: {
+        //         message: 'hi'
+        //     },
+        //     method: {
+                
+        //     }
+        // }
+        // var vm = new Vue(options); 
+
+        // 위 방법보다 ↓ 객체 리터럴 방법이 가독성이 더 뛰어남
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                message: 'hi'
+            },
+            method: {
+
+            }
+        }); 
+    </script>
+</body>
+</html>

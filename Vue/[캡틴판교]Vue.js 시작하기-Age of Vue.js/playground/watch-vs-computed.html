@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p>{{ num }}</p>
+        <p>{{ doubleNum }}</p>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                num: 10
+            },
+            computed: { // 단순한 값에 대한 계산. validation vue 라이브러리에서 대부분의 computed로 이루어져있음. 단순한 text의 입력을 받아 거기에 대한 validatino값을 생성하는 것은 computed를 많이 사용중
+                doubleNum: function(){
+                    return this.num *2;
+                }
+            },
+            watch: { // 무거운 로직(매번 실행되는것이 부담스러운). 
+                // watch는 기본적으로 newValue(갱신된 값)와 oldValue(새로운 값)를 받는다. 
+                num: function(newValue, oldValue){
+                    this.fetchUserByNumber(newValue); // 새로 바뀐 값을 methods에 인자로 넘긴다.
+                }
+            },
+            methods: {
+                fetchUserByNumber: function(num){
+                    // console.log(num);
+                    // axios를 이용해 ---하는것이 watch의 의미에 가장 부합하는 로직이라고 할 수 있다.
+                    axios.get(num);
+                }
+            }
+        })
+    </script>
+</body>
+</html>

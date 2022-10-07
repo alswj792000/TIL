@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- <app-header v-on:하위컴포넌트에서 발생한 이벤트 이름="상위 컴포넌트의 메서드 이름"></app-header> -->
+        <app-header v-on:pass="logText"></app-header>
+        <app-content v-on:add="logNum"></app-content>
+        <p>{{ num }}</p> <!-- add클릭시 실시간으로 클릭수 올라가는것을 확인하기 위해 number을 표현-->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> <!-- vue.js 스크립트 -->
+    <script>
+        var appHeader = {
+            template: '<button v-on:click="passEvent">click me</button>', // 버튼 클릭시 이벤트 실행: v-on:click | 여기서는 버튼 클릭시 상위 컴포넌트로 이벤트를 보내려고함.
+            methods: {
+                passEvent: function(){  // 기본적으로 버튼을 클릭했을때 실행되는 함수
+                    this.$emit('pass'); // 하위컴포넌트에서 발생된 이벤트 이름
+                }
+            }
+        }
+
+        var appContent = {
+            template: '<button v-on:click="addNumber">add</button>', // 버튼을 클릭하면 addNumber을 실행하겠다.
+            methods: {
+                addNumber: function(){
+                    this.$emit('add');
+                }
+            }
+        }
+
+        var vm = new Vue({ // vm이 뭐가 되었던 간에 new Vue는 vm에 담김
+            el: '#app',
+            components: {
+                'app-header': appHeader,
+                'app-content': appContent
+            }, methods: {
+                logText: function(){
+                    console.log('hi');
+                }, 
+                logNum: function(){
+                    // N = this.num + 1; // 최종값 11 출력
+
+                    this.num = this.num + 1; // 최종값 클릭 할때 마다 1씩 증가
+                    console.log(this.num); // 실시간 반영이 잘 안돼서 log활용. 바로 확인하기 위해선 number을 표현하면 됨
+                }
+
+                // ...
+            }, 
+            data: {
+                num : 10
+            }
+                
+        });
+    </script>
+</body>
+</html>
+

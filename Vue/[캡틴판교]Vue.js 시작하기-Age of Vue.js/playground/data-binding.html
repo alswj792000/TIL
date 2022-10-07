@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- <p id="abc1234">{{ num }}</p> -->
+        <p v-bind:id="uuid" v-bind:class="name">{{ num }}</p> <!-- id에 바인딩을 할건데 아래있는 uuid를 연결하겠다. -->
+        <p>{{ doubleNum }}</p>
+        <div v-if="loading"> <!-- 로딩중일 경우 출력 (true) -->
+            Loading... <!-- user가 login하기 전의 로딩상태 -->
+        </div>
+        <div v-else> <!-- 로딩이 끝나면 출력 (flase) -->
+            test user has been logged in <!-- user가 로그인 하고 나면 로그인 상태표시 -->
+        </div>
+        <div v-show="loading">
+            Loading...
+        </div>
+        <div>
+            <!-- TODO : 인풋 박스를 만들고 입력된 값을 p 태그에 출력해보세요 -->
+            <input type="text" v-model="message"> <!-- 1. input 태그를 이용해 인풋 박스 만들기 → 5. 만들어진 message를 v-model로 연결 -->
+            <p>{{ message }}</p> <!-- 2. 입력된 값을 p태그에 출력하기위해 p태그 생성  → 7. 데이터 바인딩으로 받아온 값을 출력 -->
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        // Vue가 없을때의 쿼리 접근 방법
+        // var input = document.querySelector('input');
+        // var input = $('input');
+
+        // Vue에서의 쿼리 접근 방법 → 서비스를 제공하기위한 모든 속성들은 Vue에서 제공이 되고있다! 그래서 Vue의 방법을 찾아보고 그래도 없으면 일반적인 방법들을 선택하면 됨
+
+
+        new Vue({
+            el: '#app',
+            data: {
+                num : 10,
+                // doubleNum : 10 * 2,
+                // <p>의 id를 data로 관리하고 싶을때
+                uuid: 'abc1234',
+                name: 'text-blue',
+                loading: true, // 로딩중
+                message: '' // 4. 메세지 생성
+            }, 
+            computed: { // 같이 계산되서 바뀌는 속성
+                doubleNum: function(){
+                    return this.num * 2; // this.num : data에 선언한 num을 가리키게 된다.
+                }
+            }
+        })
+    </script>
+</body>
+</html>

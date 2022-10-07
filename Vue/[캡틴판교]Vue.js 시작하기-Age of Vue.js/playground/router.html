@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div>
+            <!-- router-link*2 + tab = router-link가 두개가 자동 생성된다 -->
+            <router-link to="login">Login</router-link>
+            <!-- router-link는 최종적으로 앵커 태그로 변환되어서 나타낸다.
+                    ** 앵커 태그 : 일반적으로 링크로 이동할 때 앵커<a>태그를 이용해 href에 들어있는 특정링크로 움직이게 됨
+                    → 따리서 위 코드는 <a href="/login">Login</a>로 변환되게 됨  -->
+            <router-link to="main">Main</router-link>
+        </div>
+
+        <!-- 페이지url이 변경되었을때, 그 url을 따라서 뿌려지는 영역 -->
+        <router-view></router-view>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> <!-- 1. vue.js 스크립트 * 순서중요! -->
+    <script src="https://unpkg.com/vue-router@3.5.3/dist/vue-router.js"></script> <!-- 2. vue router : 버전 표시하지 않으면 vue3로 사용되므로 주의 -->
+
+    <script>
+        var LoginComponent = {
+            template: '<div>login</div>'
+        }
+        var MainComponent = {
+            template: '<div>main</div>'
+        }
+
+        var router = new VueRouter({
+            // 페이지의 라우팅 정보. 배열로 담김
+            routes: [
+                //- 로그인 페이지 정보
+                {
+                    // 페이지의 url 이름
+                    path: '/login',
+                    // 해당 url에서 표시될 컴포넌트
+                    component: LoginComponent
+                },
+                //- 메인 페이지 정보
+                {
+                    // *실습 : url은 main, 컴포넌트 이름은 MainComponent
+                    path: '/main',
+                    component: MainComponent
+                }
+            ]
+        });
+
+        new Vue({
+            el: '#app',
+            router: router //라우터 속성 : 라우터 변수
+        });
+
+    </script>
+</body>
+</html>

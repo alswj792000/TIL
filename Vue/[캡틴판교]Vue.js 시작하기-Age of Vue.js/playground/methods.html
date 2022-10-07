@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- <button v-on:click="메서드 이름">clcik me</button>  -->
+        <button v-on:click="logText">clcik me</button><br> <!-- 버튼을 클릭했을때 이벤트를 처리 : 버튼을 클릭했을때 메서드 이름이 실행 -->
+        <input type="text" v-on:keyup="logText"><br> <!-- keyup, keypress와 같은 일반적인 이벤트 타입을 입력해 정의할 수 있다. → 키보드가 작동하면 clicked가 콘솔에 찍힌다  -->
+        <input type="text" v-on:keyup.enter="logText"><br> <!-- .enter : (event modifiier)Enter를 눌렀을때맨 logText를 실행하겠다 → 텍스트를 치고 enter을 쳐야만 clicked 출력 -->
+        <button v-on:dblclick="twice">더블클릭</button>
+        <br>
+        <div v-on:mousemove="moveMouse">
+            마우스 움직임 체크!
+        </div>
+        <p> {{ count }}</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                count : 0
+            },
+            methods: { // methods인 이유? 비즈니스 로직을 다루는, 이벤트를 처리하고 화면을 조작하는 로직들은 한개가 아니라 여러개가 되기때문에 
+                logText: function(){
+                    console.log('clicked');
+                },
+                twice: function(){
+                    console.log('double Clicked!');
+                },
+                moveMouse: function(){
+                    // count = count + 1;
+                    this.count++
+                }
+            }
+        })
+    </script>
+</body>
+</html>

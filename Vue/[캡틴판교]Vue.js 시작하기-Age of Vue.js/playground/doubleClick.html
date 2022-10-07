@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button @dblclick="doubleClick">더블클릭!</button>
+        <button @click="clicked">클릭!</button>
+        <br><br>
+        <div v-on:mouseover="overMouse">
+            마우스를 올려보세요.
+        </div>
+        <p>{{ count }}</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                count : 0
+            },
+            methods: {
+                doubleClick: function(){
+                    console.log("더블클릭 성공");
+                },
+                clicked: function(){
+                    console.log("클릭성공!!");
+                },
+                overMouse: function(){
+                    this.count++
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <app-header v-bind:propsdata="num"></app-header> <!-- 프롭스 속성 이름 : | 상위컴포넌트의 데이터 이름 : num -->
+        <app-content v-on:pass="deliverNum"></app-content> <!-- v-on을 이용해서 pass라는 event받음. 상위컴포넌트인 Root의 메소드 수행 → deliverNum 메소드 안에 value가 별도로 선언하지 않아도 암묵적으로 전달이 된다 -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> <!-- vue.js 스크립트 -->
+    <script>
+        var appHeader = {
+            template: '<div>header</div>',
+            props: ['propsdata'] // 프롭스 속성 이름
+        }
+
+        var appContent = {
+            template: '<div>content<button v-on:click="passNum">pass</button></div>', // pass라는 버튼을 누르면 content에 있는 값이 header로 이동
+            methods: { // pass라는 버튼을 눌렀을때 신호를 발생시킴
+                passNum: function(){
+                    this.$emit('pass', 10); // pass라는 event
+                }
+            }
+        }
+
+        new Vue({ // 상위 컴포넌트(Root) = 인스턴스
+            el: '#app',
+            components: {
+                'app-header': appHeader,
+                'app-content': appContent
+            },
+            data: {
+                num: 0
+            },
+            methods: {
+                deliverNum: function(value){ // event로 넘어온 인자(10)는 받는쪽에서 (value)로 정의할 수 있다.
+                this.num = value; // 0이던 num의 값을 10으로 변경
+                }
+            }
+        });
+    </script>
+</body>
+</html>

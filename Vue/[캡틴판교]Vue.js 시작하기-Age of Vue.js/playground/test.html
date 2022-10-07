@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function getData() {
+            return new Promise(function(resolve, reject) { // 1. 프로미스 생성 : Pending(대기)상태
+                $.get('url 주소/products/1', function(response) {   
+                if (response) {
+                resolve(response); // 2-1. Fulfilled(이행)상태
+            }
+            reject(new Error("Request is failed"));  // 3-1. Rejected(실패) 상태
+            });
+            });
+        }
+
+        // 위 $.get() 호출 결과에 따라 'response' 또는 'Error' 출력
+        getData().then(function(data) { // 2-2. Fulfilled(이행)상태 → resolve의 처리 결과값 : data
+            console.log(data); // response 값 출력
+        }).catch(function(err) {  // 3-2. 3-1. Rejected(실패) 상태 → reject의 실패 처리 결과 값 : err
+            console.error(err); // Error 출력
+        });
+
+    </script>
+</body>
+</html>

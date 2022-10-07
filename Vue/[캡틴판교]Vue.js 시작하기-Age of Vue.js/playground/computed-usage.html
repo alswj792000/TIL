@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .warning {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <p v-bind:class="cname">Hello</p> <!-- data에 들어있는 값을 class로 연결할 수 있다. -->
+        <p v-bind:class="{ warning: isError }">Vue</p> <!-- { class의 이름: 조건 } : 조건에 따라 class의 추가 여부 결정 → isError가 true일때는 warning/false일때는 warning X -->
+        <p v-bind:class="errorTextColor">!!!</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                cname: 'blue-text', 
+                isError: false
+            },
+            computed: {
+                errorTextColor: function(){ // 굳이 v-bind로 class부터 넣어줄 필요없이 computed로 필요한 이름만 넣기
+                    // if (isError) {
+                    //     return 'warning'
+                    // } else {
+                    //     return null;
+                    // }
+
+                    // 위 코드를 삼항연산자를 사용해 확 줄여서 표현할 수 있다 : isError가 true면 warning / false면 null
+                    return this.isError ? 'warning' : null; // computed에서 data 속성을 접근하려면 this를 붙여야한다.
+                }
+            }
+        })
+    </script>
+</body>
+</html>

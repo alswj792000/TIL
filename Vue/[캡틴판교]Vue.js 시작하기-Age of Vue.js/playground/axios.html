@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Axios</title>
+</head>
+<body>
+  <div id="app">
+    <button v-on:click="getData">get user</button>
+    <div>
+      {{ users }} <!-- 화면에 받아온 데이터 뿌리기 -->
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        users: []
+      },
+      methods: {
+        getData: function() { 
+            // console.log(this);
+            var vm = this; // [ 해결 ] this를 vm에 담아놓고 vm의 user에 접근한다.
+            axios.get('https://jsonplaceholder.typicode.com/users/')
+                .then(function(response) {
+                // console.log(response); // 데이터의 결과 확인 가능
+                console.log(response.data); // 원하는 데이터가 배열로 넘어온다.
+                // data의 users의 빈 배열에 받아온 data를 집어넣기
+                this.users = response.data; // * 과연 이 this.users가 데이터 속성에 정의한 그 users일까? No
+                // console.log(this);
+                vm.users = response.data; // [ 해결 ]
+            })
+            .catch(function(error) {
+              console.log(error);
+            });
+        }
+      }
+    })
+  </script>
+</body>
+</html>

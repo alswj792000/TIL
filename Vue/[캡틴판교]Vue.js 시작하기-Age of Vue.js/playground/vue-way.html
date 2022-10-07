@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+        // viewModel 사용
+        var div = document.querySelector('#app');
+        var viewModel = {};
+
+        // Object.defineProperty(대상 객체, 객체의 속성, { // 특정 변수의 동작, 객체의 특정 동작을 재정의하는 API
+        //     정의할 내용
+        // }) 
+
+        // 라이브러리화 : 5. 즉시 실행 함수 -> https://developer.mozilla.org/ko/docs/Glossary/IIFE
+        (function(){
+
+            function init() {    // 라이브러리화 : 1. 특정 기능 쪼개기
+                Object.defineProperty(viewModel, 'str', {
+                    // 속성에 접근했을때의 동작을 정의
+                    get: function () {
+                        console.log('접근');
+                    },
+                    // 속성에 값을 할당했을때의 동작을 정의
+                    set: function (newValue) {
+                        console.log('할당', newValue);
+                        render(newValue);   // 라이브러리화 : 2. 새로운값이 할당되었을때 그 값을 render로 넘겨줌
+                    }
+                });
+            }
+
+            function render(value) {    // 라이브러리화 : 3. newValue를 value로 받아서 div의 값을 수정
+                div.innerHTML = value;
+            }
+
+            init(); // 라이브러리화 : 4. 호출
+        })();
+
+        
+
+    </script> 
+</body>
+</html>
