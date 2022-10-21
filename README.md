@@ -25,4 +25,4 @@ Vue
 
 OS
 ---
-- [쉽게 배우는 운영체제](https://github.com/summer-root/OS-study)
+- [쉽게 배우는 운영체제](https://github.com/summer-root/OS-study/tree/main/KMJ)
