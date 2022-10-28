@@ -20,6 +20,8 @@ Java
 JavaScript
 ---
 - [Object.entries](https://github.com/alswj792000/TIL/blob/main/JavaScript/Object.entries.md "Object.entries.md")
+- [콜백함수(Callback)](https://github.com/alswj792000/TIL/blob/main/JavaScript/%EC%BD%9C%EB%B0%B1%ED%95%A8%EC%88%98(Callback).md "콜백함수(Callback).md")
+- [Event](https://github.com/alswj792000/TIL/blob/main/JavaScript/Event.md "Event.md")
 
 SpringBoot
 ---
