@@ -10,6 +10,8 @@ Computer Science
 ---
 - ECT
 	- [IPIN, CI, DI](https://github.com/alswj792000/TIL/blob/main/Computer%20Science/ECT/IPIN%2C%20CI%2C%20DI.md "IPIN, CI, DI.md")
+	- [도메인](https://github.com/alswj792000/TIL/blob/main/Computer%20Science/ECT/%EB%8F%84%EB%A9%94%EC%9D%B8.md "도메인.md")
+	- [스테이징 서버](https://github.com/alswj792000/TIL/blob/main/Computer%20Science/ECT/%EC%8A%A4%ED%85%8C%EC%9D%B4%EC%A7%95%20%EC%84%9C%EB%B2%84.md "스테이징 서버.md")
 - Network
 	- HTTP
 		- [HTTP와 HTTPS](https://github.com/alswj792000/TIL/blob/main/Computer%20Science/Network/HTTP/HTTP%EC%99%80%20HTTPS.md "HTTP와 HTTPS.md")
@@ -51,3 +53,4 @@ Vue
 OS
 ---
 - [쉽게 배우는 운영체제](https://github.com/summer-root/OS-study/tree/main/KMJ)
+
