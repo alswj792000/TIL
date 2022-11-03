@@ -16,11 +16,13 @@
 - data와 events가 활성화되어 접근할 수 있다.
   - computed, methods, watch등이 활성화되어 접근이 가능하다.
 - 템플릿과 가상돔은 마운트 및 렌더링되지 않은 상태이다.
+
+
 **=> data에 직접 접근이 가능하기때문에, 컴포넌트 초기에 외부에서 받아온 값들로 data를 세팅해야 하거나 이벤트 리스너를 선언해야 한다면 이 단계에서 하는것이 가장 적절하다.**
 
 ---
 
-# References.
+# References
 
 <https://aomee0880.tistory.com/185><br>
 <https://zincod.tistory.com/238>
