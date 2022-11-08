@@ -32,7 +32,7 @@
             </code>
         </pre>
 
-- 스케줄링을 취소하고 싶을때는 setTimeout을 호출하면 반환되는 타이머 식별자(timer identifier)을 사용한다.
+- 스케줄링을 취소하고 싶을때는 setTimeout을 호출하면 반환되는 `타이머 식별자(timer identifier)`을 사용한다.
     <pre>
         <code>
             let timerId = setTimeout(...);
