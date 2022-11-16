@@ -19,4 +19,4 @@
 
 ## Error
 
-- []
+- [[vue-router] cannot read properties of undefined (reading 'install').md](<https://github.com/alswj792000/TIL/blob/main/Vue/Vue_Today%20I%20Learned/vue-router%5D%20cannot%20read%20properties%20of%20undefined%20(reading%20'install').md>)
