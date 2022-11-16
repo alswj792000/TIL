@@ -1,3 +1,6 @@
+
+  
+
 # Vue Today I Learned
   
 > Vue 관련 내용을 공부하고 정리합니다.
@@ -17,6 +20,9 @@
 
 ## LifeCycle
 - [Vue 라이프사이클_Created](https://github.com/alswj792000/TIL/blob/main/Vue/Vue_Today%20I%20Learned/LifeCycle/Vue%20%EB%9D%BC%EC%9D%B4%ED%94%84%EC%82%AC%EC%9D%B4%ED%81%B4_Created.md "Vue 라이프사이클_Created.md")
+
+## Router
+- [페이지 새로고침](https://github.com/alswj792000/TIL/blob/main/Vue/Vue_Today%20I%20Learned/Router/%ED%8E%98%EC%9D%B4%EC%A7%80%20%EC%83%88%EB%A1%9C%EA%B3%A0%EC%B9%A8.md "페이지 새로고침.md")
 
 ## axios
 - [axios](https://github.com/alswj792000/TIL/blob/main/Vue/Vue_Today%20I%20Learned/axios/axios.md "axios.md")
