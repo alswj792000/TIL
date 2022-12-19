@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .flex-container {
+            background-color: aliceblue;
+            border-color: skyblue;
+            border-width: 5pt;
+            border-style: solid;
+            width: 500px;
+            display: grid;
+            /* grid-template-columns: 200px 200px 500px; */
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            /* grid-template-columns: 100px 2fr 1fr; */
+            /* grid-template-columns: repeat(5, 1fr); */
+            /* grid-template-columns: repeat(3, 1fr 4fr 2fr);  */
+            /* grid-template-rows: repeat(3, minmax(100px, auto)); */
+            /* grid-template-columns: repeat(auto-fill, minmax(10%, auto)); */
+            /* grid-template-columns: repeat(auto-fit, minmax(10%, auto)); */
+
+            /* row-gap: 10px;*/ /* row의 간격을 10px로 */
+	        /* column-gap: 20px;*/ /* column의 간격을 20px로 */
+            /* gap: 10px 20px;*/ /* row-gap: 10px; column-gap: 20px; */
+            /* gap: 20px; */  /* row-gap: 20px; column-gap: 20px; */
+
+            /* grid-template-rows: repeat(3, minmax(100px, auto)); */
+            /* grid-auto-rows: minmax(100px, auto); */
+        }
+
+        .flex-item {
+            background-color: rgb(253, 171, 171);
+            border-color: rgb(247, 129, 129);
+            border-width: 1.5pt;
+            border-style: solid;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="flex-item">AAAAAAAA</div>
+        <div class="flex-item">BBB</div>
+        <div class="flex-item">CCCCCCCCCCCCCCC</div>
+        <div class="flex-item">DDDD</div>
+        <div class="flex-item">EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</div>
+        <div class="flex-item">F</div>
+    </div>
+</body>
+
+</html>
