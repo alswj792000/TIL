@@ -54,23 +54,23 @@
 
 **→ 설정을 LF로 변경해보고 재실행으로도 해결이 되지 않을때는 아예 컴퓨터를 다시 시작 해보자....**
 
-## CRLF와 LF의 차이
+# CRLF와 LF의 차이
 
 🔗 <https://velog.io/@jakeseo_me/LF%EC%99%80-CRLF%EC%9D%98-%EC%B0%A8%EC%9D%B4-Feat.-Prettier>
 
-### CRLF
+## CRLF
 
 - \r\n : 커서를 맨 앞으로 되돌리기 이후 종이를 한 칸 올리기 (Carriage return + Line Feed)
 - 이전 타자기에서의 줄넘김 개념을 그대로 가져온것.
 - `windows`에서 줄넘기 값의 기본값으로 사용한다.
 
-### LF
+## LF
 
 - \n : 종이를 한 칸 올리기 (Line Feed 전용)
 - 현대 디지털 기기의 줄넘김을 말한다.
 - `linux`에서 많이 쓴다.
 
-### CRLF와 LF가 발생시키는 문제
+## CRLF와 LF가 발생시키는 문제
 
 `Prettier` 공식문서 중 [End of Line](https://prettier.io/docs/en/options.html#end-of-line)에 대한 부분에서 이 오류가 왜 발생하는지를 알 수 있다.
 ![pretier official](https://velog.velcdn.com/images%2Fjakeseo_me%2Fpost%2Feb6d590c-de98-4094-bc5a-d9fe87d76e2b%2Fimage.png)
