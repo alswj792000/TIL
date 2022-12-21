@@ -52,13 +52,11 @@
 
 사용이 불가능한 해결방법 1을 제외한 모든 방법을 시도한 후 파일과 vscode를 여러번 재시작해봤지만 오류가 해결되지 않아 eslint를 끄고 사용하는것으로 결정했는데, 다음날 컴퓨터를 켜서 시도해보니 오류가 없어졌다(...?!)
 
-## **→ 설정을 LF로 변경해보고 재실행으로도 해결이 되지 않을때는 아예 컴퓨터를 다시 시작 해보자....**
-
----
+**→ 설정을 LF로 변경해보고 재실행으로도 해결이 되지 않을때는 아예 컴퓨터를 다시 시작 해보자....**
 
 ## CRLF와 LF의 차이
 
-<https://velog.io/@jakeseo_me/LF%EC%99%80-CRLF%EC%9D%98-%EC%B0%A8%EC%9D%B4-Feat.-Prettier>
+🔗 <https://velog.io/@jakeseo_me/LF%EC%99%80-CRLF%EC%9D%98-%EC%B0%A8%EC%9D%B4-Feat.-Prettier>
 
 ### CRLF
 
