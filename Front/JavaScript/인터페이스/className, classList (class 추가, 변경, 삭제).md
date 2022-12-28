@@ -11,7 +11,7 @@
     - `element.classList.toggle('class명')` : 특정 동작에 따라 class값이 추가/삭제. <br>class값이 있을 경우 해당 class값을 삭제하고 `false` 반환/class값이 존재하지 않으면 class값을 추가하고 `true` 반환
     - `element.classList.toggle('class명', true or false)` : 특정 동작에 따라 class값이 추가/삭제. <br>두번째 값이 `true`일 경우 인자로 사용된 class값을 추가/`false`일 경우 class값 제거
     - `element.classList.contains('class명')` : 인자로 사용된 class값이 존재하는지 확인. class값이 존재하면 `true`, 존재하지 않으면 `false`반환
-    - `element.classList.replace('교체할 class명', '새로운 class명')` : 존재하는 class 속성을 다른 class값으로 교체
+    - `element.classList.replace('교체할 class명', '새로운 class명')` : 존재하는 class 속성을 다른 class값으로 교체 
 
 
 ---
