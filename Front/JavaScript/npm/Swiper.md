@@ -10,6 +10,7 @@
 - navigation: 네비게이션 설정
 - breakPoints : 화면 크기에 따라 보여지는 모습이 바뀜(반응형 설정). width값으로 조정.
 - on
+    - init : swiper가 초기화될 때 실행
     - slideChange : 활성화된 슬라이드가 바뀔때마다 호출
     - activeIndexChange : 활성화된 인덱스가 바뀔때마다 호출
 
