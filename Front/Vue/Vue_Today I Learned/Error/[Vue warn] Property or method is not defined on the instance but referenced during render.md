@@ -1,4 +1,4 @@
-# [Vue warn]: Property or method test" is not defined on the instance but referenced during render.
+# [Vue warn]: Property or method "test" is not defined on the instance but referenced during render.
 > 'test'라는 속성이 선언되지 않았는데 화면에 렌더링 되려고 했습니다.
 
 - data나 methods에 변수를 선언해 주지 않고 화면에 렌더링 하려고 해서 발생한 오류
