@@ -10,10 +10,12 @@
 - navigation: 네비게이션 설정
 - breakPoints : 화면 크기에 따라 보여지는 모습이 바뀜(반응형 설정). width값으로 조정.
 - roundLengths: 일반 해상도 화면에서 텍스트가 흐려지는 것을 방지하기 위해 슬라이드 너비와 높이 값을 반올림. `true/false`
+- watchOverflow: 슬라이드가 1개일때 pager와 button 숨김 `true/false`. (※ loop:true와 함께 사용하는 방법🔗 )
 - on
     - init : swiper가 초기화될 때 실행
     - slideChange : 활성화된 슬라이드가 바뀔때마다 호출
     - activeIndexChange : 활성화된 인덱스가 바뀔때마다 호출
+    - afterInit : Swiper가 정상적으로 로드 되었는지 확인해서 특정 액션을 취할 때 사용
 
 ---
 # References.
@@ -21,3 +23,4 @@
 <https://blog.naver.com/PostView.naver?blogId=bomnarain&logNo=222401148738&parentCategoryNo=&categoryNo=20&viewDate=&isShowPopularPosts=true&from=search><br>
 <https://ay9318.tistory.com/49><br>
 <https://velog.io/@hsw7852/swiper-breakpoints-%EB%B0%98%EC%9D%91%ED%98%95%EC%9D%84-%EC%9C%84%ED%95%9C><br>
+<https://solbel.tistory.com/2319><br>
