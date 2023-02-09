@@ -91,19 +91,5 @@ swiper가 스와이핑될 때마다 swiper 외부 요소의 값도 변경되는 
 ---
 
 # References.
-
-[https://swiperjs.com/swiper-api](https://swiperjs.com/swiper-api)
-
- [Swiper API
-
-Swiper is the most modern free mobile touch slider with hardware accelerated transitions and amazing native behavior.
-
-swiperjs.com](https://swiperjs.com/swiper-api)
-
-[https://github.com/kidjp85/react-id-swiper/issues/490](https://github.com/kidjp85/react-id-swiper/issues/490)
-
- [How to get the Current Index of the Slider ? · Issue #490 · kidjp85/react-id-swiper
-
-I have tried thing like slideChange, activeIndex, but not able to get the current index let listImageSlickConfig = { pagination: { el: '.swiper-pagination', clickable: true, }, on: { slideC...
-
-github.com](https://github.com/kidjp85/react-id-swiper/issues/490)
+<https://swiperjs.com/swiper-api><br>
+<https://github.com/kidjp85/react-id-swiper/issues/490><br>
