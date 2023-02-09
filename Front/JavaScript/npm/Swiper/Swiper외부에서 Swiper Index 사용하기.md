@@ -34,13 +34,7 @@ swiper가 스와이핑될 때마다 swiper 외부 요소의 값도 변경되는 
 
 결론적으로 말하자면 slideChange에서 index의 값을 담는것이 아닌 `realIndexChange`에서 index의 값을 담아 사용하는것으로 위 문제를 해결했다.  
   
-[🔗issues#490](https://github.com/kidjp85/react-id-swiper/issues/490)에 따르면 duplicate 슬라이드가 loop 모드에서 자체 고유 인덱스를 갖도록 추가되기때문에 slideChange대신 realIndexChange를 사용하는것이 좋다고 한다.
-
- [How to get the Current Index of the Slider ? · Issue #490 · kidjp85/react-id-swiper
-
-I have tried thing like slideChange, activeIndex, but not able to get the current index let listImageSlickConfig = { pagination: { el: '.swiper-pagination', clickable: true, }, on: { slideC...
-
-github.com](https://github.com/kidjp85/react-id-swiper/issues/490)
+[🔗issues #490](https://github.com/kidjp85/react-id-swiper/issues/490)에 따르면 duplicate 슬라이드가 loop 모드에서 자체 고유 인덱스를 갖도록 추가되기때문에 slideChange대신 realIndexChange를 사용하는것이 좋다고 한다.
 
 ---
 
